@@ -14,28 +14,33 @@ namespace TC25Test
         private void btnsetTriggerType_Press(object sender, EventArgs e)
         {
             if (i == 0)
-            { this.barcode1.SetTriggerType(Smobiler.Device.TriggerType.Software);btnsetTriggerType.Text = "设置扫描方式 1"; i++; }
+            { this.tC25Scanner1.SetTriggerType(Smobiler.Device.TriggerType.Software);btnsetTriggerType.Text = "设置扫描方式 1"; i++; }
             else
-            { this.barcode1.SetTriggerType(Smobiler.Device .TriggerType.Hardware); btnsetTriggerType.Text = "设置扫描方式 0"; i = 0; }
+            { this.tC25Scanner1.SetTriggerType(Smobiler.Device .TriggerType.Hardware); btnsetTriggerType.Text = "设置扫描方式 0"; i = 0; }
         }
 
         private void btnscan_Press(object sender, EventArgs e)
         {
-            this.barcode1.Scan();
+            this.tC25Scanner1.Scan();
         }
 
 
         private void btnstop_Press(object sender, EventArgs e)
         {
-            this.barcode1.ScanStop();
+            this.tC25Scanner1.ScanStop();
         }
 
         private void btnstatus_Press(object sender, EventArgs e)
         {
-            this.barcode1.Status();
+            this.tC25Scanner1.Status();
         }
 
-        private void barcode1_OnNotify(object sender, Smobiler.Core.Controls.ComponentResultArgs e)
+        private void tC25Scanner1_DataCaptured(object sender, TC25BarcodeScanEventArgs e)
+        {
+            this.label1.Text = e.Data;
+        }
+
+        private void tC25Scanner1_OnNotify(object sender, ComponentResultArgs e)
         {
             if (e.isError == true)
             {
@@ -43,12 +48,7 @@ namespace TC25Test
             }
         }
 
-        private void barcode1_DataCaptured(object sender, TC25BarcodeScanEventArgs e)
-        {
-            this.label1.Text = e.Data;
-        }
-
-        private void barcode1_OnStatus(object sender, TC25BarcodeStatusEventArgs e)
+        private void tC25Scanner1_OnStatus(object sender, TC25BarcodeStatusEventArgs e)
         {
             this.label2.Text = e.Status;
         }

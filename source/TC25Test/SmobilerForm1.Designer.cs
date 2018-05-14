@@ -29,20 +29,13 @@ namespace TC25Test
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.barcode1 = new Smobiler.Device.TC25Scanner();
             this.btnsetTriggerType = new Smobiler.Core.Controls.Button();
             this.btnscan = new Smobiler.Core.Controls.Button();
             this.btnstop = new Smobiler.Core.Controls.Button();
             this.btnstatus = new Smobiler.Core.Controls.Button();
             this.label1 = new Smobiler.Core.Controls.Label();
             this.label2 = new Smobiler.Core.Controls.Label();
-            // 
-            // barcode1
-            // 
-            this.barcode1.Name = "barcode1";
-            this.barcode1.DataCaptured += new Smobiler.Device.TC25BarcodeScanEventHandler(this.barcode1_DataCaptured);
-            this.barcode1.OnNotify += new Smobiler.Device.TC25BarcodeOnNotifyEventHandler(this.barcode1_OnNotify);
-            this.barcode1.OnStatus += new Smobiler.Device.TC25BarcodeStatusEventHandler(this.barcode1_OnStatus);
+            this.tC25Scanner1 = new Smobiler.Device.TC25Scanner();
             // 
             // btnsetTriggerType
             // 
@@ -90,10 +83,17 @@ namespace TC25Test
             this.label2.Size = new System.Drawing.Size(200, 71);
             this.label2.Text = "label2";
             // 
+            // tC25Scanner1
+            // 
+            this.tC25Scanner1.Name = "tC25Scanner1";
+            this.tC25Scanner1.DataCaptured += new Smobiler.Device.TC25BarcodeScanEventHandler(this.tC25Scanner1_DataCaptured);
+            this.tC25Scanner1.OnNotify += new Smobiler.Device.TC25BarcodeOnNotifyEventHandler(this.tC25Scanner1_OnNotify);
+            this.tC25Scanner1.OnStatus += new Smobiler.Device.TC25BarcodeStatusEventHandler(this.tC25Scanner1_OnStatus);
+            // 
             // SmobilerForm1
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
-            this.barcode1});
+            this.tC25Scanner1});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnsetTriggerType,
             this.btnscan,
@@ -105,13 +105,12 @@ namespace TC25Test
 
         }
         #endregion
-
-        private Smobiler.Device.TC25Scanner barcode1;
         private Smobiler.Core.Controls.Button btnsetTriggerType;
         private Smobiler.Core.Controls.Button btnscan;
         private Smobiler.Core.Controls.Button btnstop;
         private Smobiler.Core.Controls.Button btnstatus;
         private Smobiler.Core.Controls.Label label1;
         private Smobiler.Core.Controls.Label label2;
+        private TC25Scanner tC25Scanner1;
     }
 }

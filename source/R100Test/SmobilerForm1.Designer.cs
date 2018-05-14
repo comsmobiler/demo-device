@@ -28,7 +28,6 @@ namespace H947BarcodeTest
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.barcode1 = new Smobiler.Device.R100Scanner();
             this.btnScan = new Smobiler.Core.Controls.Button();
             this.btnScanInstantly = new Smobiler.Core.Controls.Button();
             this.btnStopScan = new Smobiler.Core.Controls.Button();
@@ -37,13 +36,7 @@ namespace H947BarcodeTest
             this.labData = new Smobiler.Core.Controls.Label();
             this.btnBindKeyDown = new Smobiler.Core.Controls.Button();
             this.btnUnbindKeyDown = new Smobiler.Core.Controls.Button();
-            // 
-            // barcode1
-            // 
-            this.barcode1.Name = "barcode1";
-            this.barcode1.DataCaptured += new Smobiler.Device.R100BarcodeScanEventHandler(this.barcode1_DataCaptured);
-            this.barcode1.OnNotify += new Smobiler.Device.R100BarcodeOnNotifyEventHandler(this.barcode1_OnNotify);
-            this.barcode1.KeyDown += new Smobiler.Device.R100ButtonEventHandler(this.barcode1_KeyDown);
+            this.r100Scanner1 = new Smobiler.Device.R100Scanner();
             // 
             // btnScan
             // 
@@ -107,10 +100,17 @@ namespace H947BarcodeTest
             this.btnUnbindKeyDown.Text = "扫描键不自定义";
             this.btnUnbindKeyDown.Press += new System.EventHandler(this.btnUnbindKeyDown_Press);
             // 
+            // r100Scanner1
+            // 
+            this.r100Scanner1.Name = "r100Scanner1";
+            this.r100Scanner1.DataCaptured += new Smobiler.Device.R100BarcodeScanEventHandler(this.r100Scanner1_DataCaptured);
+            this.r100Scanner1.OnNotify += new Smobiler.Device.R100BarcodeOnNotifyEventHandler(this.r100Scanner1_OnNotify);
+            this.r100Scanner1.KeyDown += new Smobiler.Device.R100ButtonEventHandler(this.r100Scanner1_KeyDown);
+            // 
             // SmobilerForm1
             // 
             this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
-            this.barcode1});
+            this.r100Scanner1});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnScan,
             this.btnScanInstantly,
@@ -126,7 +126,6 @@ namespace H947BarcodeTest
         #endregion
 
         private Smobiler.Core.Controls.Button btnScan;
-        private Smobiler.Device.R100Scanner barcode1;
         private Smobiler.Core.Controls.Button btnScanInstantly;
         private Smobiler.Core.Controls.Button btnStopScan;
         private Smobiler.Core.Controls.Button btnEnableTrigger;
@@ -134,5 +133,6 @@ namespace H947BarcodeTest
         private Smobiler.Core.Controls.Label labData;
         private Smobiler.Core.Controls.Button btnBindKeyDown;
         private Smobiler.Core.Controls.Button btnUnbindKeyDown;
+        private Smobiler.Device.R100Scanner r100Scanner1;
     }
 }
