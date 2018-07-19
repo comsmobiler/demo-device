@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC25Test", "TC25Test\TC25Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V7000Test", "V7000Test\V7000Test.csproj", "{0E5AEF6E-BD01-49C7-96E5-8D43E781653C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosPrinterTest", "PosPrinterTest\PosPrinterTest.csproj", "{6473B6CF-3610-4072-83EC-D2546529076C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0E5AEF6E-BD01-49C7-96E5-8D43E781653C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E5AEF6E-BD01-49C7-96E5-8D43E781653C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E5AEF6E-BD01-49C7-96E5-8D43E781653C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6473B6CF-3610-4072-83EC-D2546529076C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6473B6CF-3610-4072-83EC-D2546529076C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6473B6CF-3610-4072-83EC-D2546529076C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6473B6CF-3610-4072-83EC-D2546529076C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
