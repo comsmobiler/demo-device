@@ -1,6 +1,3 @@
-# demo-device
-* [R100扫描插件](doc/R100.md)
-* [R1000扫描插件](doc/R1000.md)
-* [R2000扫描插件](doc/R2000.md)
-* [TC25扫描插件](doc/TC25.md)
-* [V7000扫描插件](doc/V7000.md)
+﻿# demo-device
+* 本项目已经被合并到SmobilerTutorials 项目中 详见 https://github.com/comsmobiler/SmobilerTutorials/tree/master/Source/Devices
+* 如果需要以前的项目内容，请移步到master分支
